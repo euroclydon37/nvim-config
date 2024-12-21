@@ -51,5 +51,3 @@ end
 
 vim.keymap.set({ "n", "t" }, "<space><space>t", toggle_terminal, { nowait = true })
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
-
-print("updated")
