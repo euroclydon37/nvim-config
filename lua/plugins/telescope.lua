@@ -16,6 +16,9 @@ return {
 	    -- Find symbol
 	    vim.keymap.set("n", "<space>fs", t.lsp_document_symbols)
 
+	    -- Find definition
+	    vim.keymap.set("n", "<space>fd", t.lsp_definitions)
+
 	    -- Find references
 	    vim.keymap.set("n", "<space>fr", t.lsp_references)
 
