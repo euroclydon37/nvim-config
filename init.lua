@@ -21,11 +21,11 @@ vim.keymap.set("n", "<space>/", function()
 	vim.cmd('let @/ = ""')
 end)
 
-vim.keymap.set("n", "<space>wv", function()
+vim.keymap.set("n", "<space><space>wv", function()
 	vim.cmd("vsplit")
 end)
 
-vim.keymap.set("n", "<space>wh", function()
+vim.keymap.set("n", "<space><space>wh", function()
 	vim.cmd("split")
 end)
 
