@@ -60,11 +60,11 @@ local function hide_terminal()
 end
 
 -- The buffer hotkeys
-vim.keymap.set({ "n", "t" }, "<space><space>t1", show_terminal(1), { nowait = true })
-vim.keymap.set({ "n", "t" }, "<space><space>t2", show_terminal(2), { nowait = true })
-vim.keymap.set({ "n", "t" }, "<space><space>t3", show_terminal(3), { nowait = true })
-vim.keymap.set({ "n", "t" }, "<space><space>t4", show_terminal(4), { nowait = true })
-vim.keymap.set({ "n", "t" }, "<space><space>t5", show_terminal(5), { nowait = true })
+vim.keymap.set({ "n", "t" }, "<space><space>t1", show_terminal(1), { desc = "Show terminal 1", nowait = true })
+vim.keymap.set({ "n", "t" }, "<space><space>t2", show_terminal(2), { desc = "Show terminal 2", nowait = true })
+vim.keymap.set({ "n", "t" }, "<space><space>t3", show_terminal(3), { desc = "Show terminal 3", nowait = true })
+vim.keymap.set({ "n", "t" }, "<space><space>t4", show_terminal(4), { desc = "Show terminal 4", nowait = true })
+vim.keymap.set({ "n", "t" }, "<space><space>t5", show_terminal(5), { desc = "Show terminal 5", nowait = true })
 
-vim.keymap.set({ "n", "t" }, "<space><space>th", hide_terminal, { nowait = true })
-vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+vim.keymap.set({ "n", "t" }, "<space><space>th", hide_terminal, { desc = "Hide togglable terminal", nowait = true })
+vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Exit terminal mode" })

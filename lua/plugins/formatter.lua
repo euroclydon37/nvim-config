@@ -21,6 +21,7 @@ return {
 				json = { "prettierd" },
 				graphql = { "prettierd" },
 				markdown = { "prettierd" },
+				rust = { "rustfmt" },
 			},
 		})
 	end,
