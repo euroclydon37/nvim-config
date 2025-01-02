@@ -49,19 +49,19 @@ vim.keymap.set("n", "<space>wk", move_window_up, { desc = "Move up one window." 
 vim.keymap.set("n", "<space>wj", move_window_down, { desc = "Move down one window." })
 
 -- Tab navigation
-local function move_tab_right()
-	vim.cmd("tabnext")
-end
-local function move_tab_left()
-	vim.cmd("tabprevious")
-end
-local function new_tab()
-	vim.cmd("tabnew")
-end
-
-vim.keymap.set("n", "<space>tl", move_tab_right, { desc = "Move right one tab." })
-vim.keymap.set("n", "<space>th", move_tab_left, { desc = "Move left one tab." })
-vim.keymap.set("n", "<space>nt", new_tab, { desc = "Move left one tab." })
+-- local function move_tab_right()
+	-- vim.cmd("tabnext")
+-- end
+-- local function move_tab_left()
+	-- vim.cmd("tabprevious")
+-- end
+-- local function new_tab()
+	-- vim.cmd("tabnew")
+-- end
+-- 
+-- vim.keymap.set("n", "<space>tl", move_tab_right, { desc = "Move right one tab." })
+-- vim.keymap.set("n", "<space>th", move_tab_left, { desc = "Move left one tab." })
+-- vim.keymap.set("n", "<space>nt", new_tab, { desc = "Move left one tab." })
 
 -- Settings
 vim.opt.shiftwidth = 2
