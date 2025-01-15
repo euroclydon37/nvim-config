@@ -63,8 +63,25 @@ vim.keymap.set("n", "<space>tl", move_tab_right, { desc = "Move right one tab." 
 vim.keymap.set("n", "<space>th", move_tab_left, { desc = "Move left one tab." })
 vim.keymap.set("n", "<space>nt", new_tab, { desc = "Move left one tab." })
 
+local function open_diagnostic()
+	vim.diagnostic.open_float()
+end
+
+local function next_diagnostic()
+	vim.diagnostic.goto_next()
+end
+
+local function previous_diagnostic()
+	vim.diagnostic.goto_prev()
+end
+
+vim.keymap.set("n", "<space><space>d", open_diagnostic, { desc = "Open diagnostic floating window." })
+vim.keymap.set("n", "<space>dl", next_diagnostic, { desc = "Go to next diagnostic." })
+vim.keymap.set("n", "<space>dh", previous_diagnostic, { desc = "Go to previous diagnostic." })
+
 -- Settings
 vim.opt.shiftwidth = 2
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.cursorline = true

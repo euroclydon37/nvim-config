@@ -11,10 +11,13 @@ return {
 		end, { desc = "Run the Telescope command to search everything." })
 
 		-- Open keymaps
-		vim.keymap.set("n", "<space><space>k", t.keymaps, { desc = "Search keymaps with Telescope" })
+		vim.keymap.set("n", "<space>fk", t.keymaps, { desc = "Search keymaps with Telescope" })
 
 		-- Find Files
 		vim.keymap.set("n", "<space>ff", t.find_files, { desc = "Search files with Telescope" })
+
+		-- Find Text
+		vim.keymap.set("n", "<space>ft", t.live_grep, { desc = "Search project for text with Telescope" })
 
 		-- Find symbol
 		vim.keymap.set(
