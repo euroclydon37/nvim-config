@@ -1,5 +1,5 @@
 require("config.lazy")
-require("custom.terminal")
+require("custom.open_in_github")
 
 vim.keymap.set("n", "<space><space>q", function()
 	vim.cmd("q")
