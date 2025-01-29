@@ -19,6 +19,9 @@ return {
 		-- Find Text
 		vim.keymap.set("n", "<space>ft", t.live_grep, { desc = "Search project for text with Telescope" })
 
+		-- Find Buffer
+		vim.keymap.set("n", "<space>fb", t.buffers, { desc = "Search open buffers" })
+
 		-- Find symbol
 		vim.keymap.set(
 			"n",
