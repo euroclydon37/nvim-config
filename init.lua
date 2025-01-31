@@ -75,9 +75,14 @@ local function previous_diagnostic()
 	vim.diagnostic.goto_prev()
 end
 
+local function code_actions()
+	vim.lsp.buf.code_action()
+end
+
 vim.keymap.set("n", "<space><space>d", open_diagnostic, { desc = "Open diagnostic floating window." })
 vim.keymap.set("n", "<space>dl", next_diagnostic, { desc = "Go to next diagnostic." })
 vim.keymap.set("n", "<space>dh", previous_diagnostic, { desc = "Go to previous diagnostic." })
+vim.keymap.set("n", "<space>ca", code_actions, { desc = "Open code actions." })
 
 -- Settings
 vim.opt.shiftwidth = 2
