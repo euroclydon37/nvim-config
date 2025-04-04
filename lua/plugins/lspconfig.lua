@@ -17,6 +17,16 @@ return {
 		local lsp = require("lspconfig")
 		lsp.lua_ls.setup({})
 		lsp.ts_ls.setup({})
+		lsp.eslint.setup({
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"javascript.jsx",
+				"typescript",
+				"typescriptreact",
+				"typescript.tsx",
+			},
+		})
 		lsp.rust_analyzer.setup({})
 	end,
 }

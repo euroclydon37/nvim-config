@@ -85,6 +85,7 @@ vim.keymap.set("n", "<space>dh", previous_diagnostic, { desc = "Go to previous d
 vim.keymap.set("n", "<space>ca", code_actions, { desc = "Open code actions." })
 
 -- Settings
+vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.number = true
 vim.opt.relativenumber = true
