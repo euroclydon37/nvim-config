@@ -28,5 +28,6 @@ return {
 			},
 		})
 		lsp.rust_analyzer.setup({})
+		lsp.clangd.setup({})
 	end,
 }

@@ -22,6 +22,7 @@ return {
 				graphql = { "prettierd" },
 				markdown = { "prettierd" },
 				rust = { "rustfmt" },
+				cpp = { "clang_format" },
 			},
 		})
 	end,
