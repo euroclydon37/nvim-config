@@ -1,6 +1,17 @@
 return {
 	"folke/trouble.nvim",
-	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	opts = {
+		modes = {
+			my_diagnostics = {
+				mode = "diagnostics",
+				filter = function(items)
+					return vim.tbl_filter(function(item)
+						return item.severity == vim.diagnostic.severity.ERROR
+					end, items)
+				end,
+			},
+		},
+	}, -- for default options, refer to the configuration section for custom setup.
 	cmd = "Trouble",
 	keys = {
 		{

@@ -44,26 +44,26 @@ vim.keymap.set("n", "<space>wk", move_window_up, { desc = "Move up one window." 
 vim.keymap.set("n", "<space>wj", move_window_down, { desc = "Move down one window." })
 
 -- Window resizing
-local function resize_window_down()
+local function window_grow()
 	vim.cmd("resize +2")
 end
 
-local function resize_window_up()
+local function window_shrink()
 	vim.cmd("resize -2")
 end
 
-local function resize_window_right()
+local function vertical_window_grow()
 	vim.cmd("vertical resize +4")
 end
 
-local function resize_window_left()
+local function vertical_window_shrink()
 	vim.cmd("vertical resize -4")
 end
 
-vim.keymap.set("n", "L", resize_window_right, { desc = "Move right one window.", noremap = true })
-vim.keymap.set("n", "H", resize_window_left, { desc = "Move left one window.", noremap = true })
-vim.keymap.set("n", "K", resize_window_up, { desc = "Move up one window.", noremap = true })
-vim.keymap.set("n", "J", resize_window_down, { desc = "Move down one window.", noremap = true })
+vim.keymap.set("n", "<C-Right>", vertical_window_grow, { desc = "Move right one window.", noremap = true })
+vim.keymap.set("n", "<C-Left>", vertical_window_shrink, { desc = "Move left one window.", noremap = true })
+vim.keymap.set("n", "<C-Up>", window_grow, { desc = "Move up one window.", noremap = true })
+vim.keymap.set("n", "<C-Down>", window_shrink, { desc = "Move down one window.", noremap = true })
 
 -- Tab navigation
 local function move_tab_right()

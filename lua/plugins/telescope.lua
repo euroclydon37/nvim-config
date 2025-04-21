@@ -54,6 +54,13 @@ return {
 		end, { desc = "Search Neovim config files with Telescope. Makes it easy to edit neovim settings." })
 
 		require("telescope").setup({
+			pickers = {
+				diagnostics = {
+					severity = {
+						min = vim.diagnostic.severity.WARN,
+					},
+				},
+			},
 			extensions = {
 				fzf = {},
 			},
