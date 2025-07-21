@@ -54,7 +54,12 @@ return {
 		end, { desc = "Search Neovim config files with Telescope. Makes it easy to edit neovim settings." })
 
 		require("telescope").setup({
+			defaults = {},
 			pickers = {
+				lsp_references = {
+					path_display = { "smart" },
+					fname_width = 80,
+				},
 				diagnostics = {
 					severity = {
 						min = vim.diagnostic.severity.WARN,

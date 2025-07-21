@@ -17,6 +17,7 @@ return {
 		local lsp = require("lspconfig")
 		lsp.lua_ls.setup({})
 		lsp.ts_ls.setup({})
+		lsp.ruby_lsp.setup({})
 		lsp.eslint.setup({
 			filetypes = {
 				"javascript",
@@ -29,5 +30,10 @@ return {
 		})
 		lsp.rust_analyzer.setup({})
 		lsp.clangd.setup({})
+		lsp.kotlin_language_server.setup({
+			init_options = {
+				storagePath = "/Users/jeremy.dunn/language-servers/data/kotlin",
+			},
+		})
 	end,
 }

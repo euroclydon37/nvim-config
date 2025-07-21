@@ -1,6 +1,12 @@
 return {
 	"folke/trouble.nvim",
 	opts = {
+		position = "right", -- position of the trouble window
+		win = {
+			size = {
+				width = 110, -- width of the trouble window
+			},
+		},
 		modes = {
 			my_diagnostics = {
 				mode = "diagnostics",

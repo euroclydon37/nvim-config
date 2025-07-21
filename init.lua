@@ -43,6 +43,8 @@ vim.keymap.set("n", "<space>wh", move_window_left, { desc = "Move left one windo
 vim.keymap.set("n", "<space>wk", move_window_up, { desc = "Move up one window." })
 vim.keymap.set("n", "<space>wj", move_window_down, { desc = "Move down one window." })
 
+vim.lsp.set_log_level("debug")
+
 -- Window resizing
 local function window_grow()
 	vim.cmd("resize +2")
@@ -100,6 +102,13 @@ vim.keymap.set("n", "<space><space>d", open_diagnostic, { desc = "Open diagnosti
 vim.keymap.set("n", "<space>dl", next_diagnostic, { desc = "Go to next diagnostic." })
 vim.keymap.set("n", "<space>dh", previous_diagnostic, { desc = "Go to previous diagnostic." })
 vim.keymap.set("n", "<space>ca", code_actions, { desc = "Open code actions." })
+
+-- User commands
+vim.api.nvim_create_user_command("CopyPath", function()
+	local path = vim.fn.expand("%:.")
+	vim.fn.setreg("+", path)
+	print("Copied to clipboard: " .. path)
+end, { desc = "Copy current buffer's absolute path to clipboard" })
 
 -- Settings
 vim.opt.tabstop = 2
